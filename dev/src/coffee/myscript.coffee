@@ -1,2 +1,1 @@
-opposite = true
-number = -42 if opposite
+console.log('Hello, console!');

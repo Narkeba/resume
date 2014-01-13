@@ -4,11 +4,11 @@
 
 * Gulp!
 * CSS Autoprefixing
-* Built-in preview server with LiveReload
+* LiveReload
 * Automagically compile CoffeeScript, LESS & Jade
+* Automagically compress & concat JS/CSS/HTML
 * Automagically lint your scripts
 * Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)
-* Mocha Unit Testing with PhantomJS
 * Twitter Bootstrap 3
 * Leaner Modernizr builds
 
