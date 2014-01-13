@@ -1,7 +1,9 @@
 var gulp = require('gulp');
+var pkg = require('./package.json');
 var tasks = require('gulp-load-tasks')();
 var server = require('tiny-lr')();
 var stylish = require('jshint-stylish');
+var connect = require('connect');
 
 gulp.task('coffee', function() {
 	return gulp.src('dev/src/coffee/**/*.coffee')
@@ -18,6 +20,7 @@ gulp.task('less', function() {
 	return gulp.src('dev/src/less/**/*.less')
 		.pipe(tasks.less())
 		.pipe(tasks.autoprefixer("last 1 version", "> 1%", "ie 8", "ie 7"))
+		.pipe(tasks.csso())
 		.pipe(tasks.concat('all.css'))
 		.pipe(gulp.dest('dev/css'))
 		.pipe(tasks.livereload(server));
@@ -43,10 +46,17 @@ gulp.task('build', function() {
 	gulp.run('jade');
 	gulp.src(['.tmp/**/*', 'dev/**/*.*', '!dev/src/**/*.*'])
 		.pipe(gulp.dest('prod'));
-	gulp.run('replace');
 	gulp.src('.tmp', {read: false})
 		.pipe(tasks.clean());
 });
+
+gulp.task('http', function() {
+	connect()
+		.use(require('connect-livereload')())
+		.use(connect.static('./dev'))
+		.listen('9000');
+	console.log('Server listening on http://localhost:9000');
+}); 
 
 gulp.task('watch', function() {
 	gulp.run('less');
@@ -65,4 +75,5 @@ gulp.task('watch', function() {
 			gulp.run('jade');
 		});
 	});
+	gulp.run('http');
 });

@@ -2,15 +2,14 @@
 
 ## Features
 
-* Gulp!
+* Built-in preview server with LiveReload
 * CSS Autoprefixing
-* LiveReload
 * Automagically compile CoffeeScript, LESS & Jade
 * Automagically compress & concat JS/CSS/HTML
 * Automagically lint your scripts
 * Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)
 * Twitter Bootstrap 3
-* Leaner Modernizr builds
+* Modernizr
 
 ## Easy install
 

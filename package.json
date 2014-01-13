@@ -23,6 +23,9 @@
     "gulp-util": "~2.2.9",
     "tiny-lr": "0.0.5",
     "jshint-stylish": "~0.1.5",
-    "gulp-imagemin": "~0.1.4"
+    "gulp-imagemin": "~0.1.4",
+    "gulp-csso": "~0.1.7",
+    "connect-livereload": "~0.3.2",
+    "connect": "~2.12.0"
   }
 }
