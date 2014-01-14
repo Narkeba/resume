@@ -1,9 +1,14 @@
 {
-	"name": "dev",
-	"private": true,
-	"devDependencies": {
-		"modernizr": "~2.6.2",
-		"jquery": "~1.10.2",
-		"momentjs": "latest"
-	}
+  "name": "dev",
+  "private": true,
+  "devDependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2",
+    "momentjs": "latest"
+  },
+  "dependencies": {
+    "backbone": "~1.1.0",
+    "underscore": "~1.5.2",
+    "backbone.localStorage": "~1.1.7"
+  }
 }

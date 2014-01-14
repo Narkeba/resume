@@ -1,58 +1,38 @@
-.browsehappy {
-	margin: 0.2em 0;
-	background: #ccc;
-	color: #000;
-	padding: 0.2em 0;
+@import "variables.less";
+
+body, html {
+	height: 100%;
 }
 
-body {
-	padding-top: 10px;
-	padding-bottom: 20px;
+#wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -@footerHeight;
+	padding: 10px 0 @footerHeight;
 }
-
-.header,
-.marketing,
-.footer {
-	padding-left: 15px;
-	padding-right: 15px;
+#footer {
+	height: @footerHeight;
 }
-
-.header {
-	border-bottom: 1px solid #e5e5e5;
-	margin-bottom: 10px;
+#information {
+	height: 194px;
+	margin-bottom: 20px;
+	h3 {
+		margin-top: 0;
+	}
 }
-
-.header h3 {
+#avatar {
+	margin-right: 20px;
+}
+#portfolio .row h4 {
 	margin-top: 0;
-	margin-bottom: 0;
-	line-height: 40px;
-	padding-bottom: 19px;
 }
-
-.footer {
-	padding-top: 19px;
-	color: #777;
-	border-top: 1px solid #696969;
+.fix-height {
+	height: 194px;
+	display: inline-block;
+	vertical-align: top;
 }
-
-.container-narrow > hr {
-	margin: 30px 0;
-}
-
-.jumbotron {
-	text-align: center;
-	border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-	font-size: 21px;
-	padding: 14px 24px;
-}
-
-.marketing {
-	margin: 40px 0;
-}
-
-.marketing p + h4 {
-	margin-top: 28px;
+#works:after {
+	content: "";
+	display: table;
+	clear: both;
 }

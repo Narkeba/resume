@@ -1,6 +1,5 @@
 node_modules
-prod
-dev/.tmp
-dev/*.html
-dev/css/all.css
-dev/js/all.js
+build/*.html
+build/css/all.css
+build/js/all.js
+build/js/vendor/
