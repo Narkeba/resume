@@ -1,1 +1,4 @@
-console.log('Hello, console!');
+consoleLog = (msg) ->
+	console.log(msg)
+
+consoleLog 'Hello, console!'

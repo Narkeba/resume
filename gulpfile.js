@@ -56,6 +56,12 @@ gulp.task('http', function() {
 		.use(connect.static('./dev'))
 		.listen('9000');
 	console.log('Server listening on http://localhost:9000');
+	var options = {
+		url: "http://localhost:9000",
+		app: "chrome"
+	};
+	gulp.src('dev/index.html')
+		.pipe(tasks.open("", options));
 }); 
 
 gulp.task('watch', function() {

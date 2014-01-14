@@ -1,1 +1,1 @@
-(function(){console.log("Hello, console!")}).call(this);
+(function(){var o;(o=function(o){return console.log(o)})("Hello, console!")}).call(this);

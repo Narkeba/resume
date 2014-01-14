@@ -2,3 +2,5 @@ node_modules
 prod
 dev/.tmp
 dev/*.html
+dev/css/all.css
+dev/js/all.js
