@@ -28,7 +28,7 @@ Run server
 gulp watch
 ```
 
-Build site
+Build
 ```
-gulp build
+gulp
 ```
