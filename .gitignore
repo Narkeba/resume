@@ -1,5 +1,1 @@
 node_modules
-build/*.html
-build/css/all.css
-build/js/all.js
-build/js/vendor/
