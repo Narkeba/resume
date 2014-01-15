@@ -1,112 +1,126 @@
 extends partials/layout.jade
 
 block content
+	#header
+		nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+			.container
+				ul.nav.navbar-nav
+					li: a(href="#information") Информация
+					li: a(href="#worked") С чем работал
+					li: a(href="#works") Предыдущие места работы
+					li: a(href="#portfolio") Портфолио
+					li: a(href="#additionally") Допонительно
 	.container#wrap
-			#information.row
+			section#information.row
+					#about.work.col-md-5
+						.row
+							.col-xs-5
+								img.img-thumbnail.pull-left#avatar(src="images/narkeba.jpg")
+							.col-xs-7
+								h3 О себе
+								p: b Бальхаев Михаил Доржиевич
+								p 09.03.1995 
+									small.text-muted (18 лет)
+								p Место проживания: Москва
+								p Сфера деятельности: FrontEnd
+								p Опыт работы: 4-5 лет
 
-				#about.fix-height.work.col-md-5
-					img.img-thumbnail.pull-left#avatar(src="images/narkeba.jpg")
-					h3 О себе
-					p: b Бальхаев Михаил Доржиевич
-					p 09.03.1995 
-						small.text-muted (18 лет)
-					p Место проживания: Москва
-					p Сфера деятельности: FrontEnd
-					p Опыт работы: 4-5 лет
+					ul#skills.work.col-md-4
+						h3 Умения 
+							small По шкале от 1 до 5
+						.row
+							.col-md-6
+								p: b FrontEnd
+								li JavaScript: 5
+								li HTML5: 5
+								li CSS3: 5
+							.col-md-6
+								p: b BackEnd
+								li JavaScript: 5
+								li Python: 3
+								li PHP: 3
 
-				ul#skills.fix-height.work.col-md-4
-					h3 Умения 
-						small По шкале от 1 до 5
-					.row
-						.col-md-6
-							p: b FrontEnd
-							li JavaScript: 5
-							li HTML5: 5
-							li CSS3: 5
-						.col-md-6
-							p: b BackEnd
-							li JavaScript: 5
-							li Python: 3
-							li PHP: 3
+					#contacts.work.col-md-3
+						h3 Контакты
+						p: b Моб: 
+							a(href="tel:+79161064263") 8 (916) 106-42-63
+						p E-Mail: 
+							a(href="mailto:narkeba@gmail.com") narkeba@gmail.com
+						p Skype: 
+							a(href="skype:jivan13?call") jivan13
 
-				#contacts.fix-height.work.col-md-3
-					h3 Контакты
-					p: b Моб: 
-						a(href="tel:+79161064263") 8 (916) 106-42-63
-					p E-Mail: 
-						a(href="mailto:narkeba@gmail.com") narkeba@gmail.com
-					p Skype: 
-						a(href="skype:jivan13?call") jivan13
-			.panel.panel-primary#worked
+			section.panel.panel-primary#worked
 				.panel-heading С чем работал
 				.panel-body
 					.row
-						.col-md-8
+						.col-xs-8
 							h4 Framework:
 							.row
-								.col-md-6
+								.col-xs-6
 									p: b FrontEnd
 									p Backbone
 									p AngularJs
 									p jQuery
-								.col-md-6
+									p Meteor
+								.col-xs-6
 									p: b BackEnd
 									p Django
 									p Yii
 									p ASP.NET
-						.col-md-4
+									p Meteor
+						.col-xs-4
 							h4 Препроцессоры:
 							p Less
 							p Sass
 							p CoffeeScript
 					.row
-						.col-md-4
+						.col-xs-4
 							h4 Шаблонизаторы:
 							p Jade
 							p Handlebars
 							p Razor
-						.col-md-4
+						.col-xs-4
 							h4 Сборщики пакетов:
 							p Grunt
 							p Gulp
-						.col-md-4
+						.col-xs-4
 							h4 CMS:
 							p Wordpress
 							p Joomla
 							p ModX
-					p <b>Прочее:</b> Git, SocketIO
+					p <b>Прочее:</b> Git, SocketIO, 
 				.panel-footer
 					b От себя:
 					p. Считаю что будущее Web-Программирования за JavaScript, т.к. уже в наше время явно виднеется тенденция к его распространению (NodeJS, JS фреймворки), поэтому делаю максимальный упор на него. Активно изучаю все что работает на JavaScript, начиная от Front-Framework'ов (AngularJS, Backbone), заканчивая сборщиками пакетов (Gulp, Grunt). Искренне надеюсь что когда-нибудь мне удасться реализовать серьезный проект на NodeJS.
 
-			#works
+			section#works
 				h3 Предыдущие места работы
 				.row
-					.work.col-md-4
+					.work.col-sm-4
 						b Рекламное агентство - RedBox
 						p: a(href="http://ra-redbox.ru", target="_blank") http://ra-redbox.ru
 						p Первое место работы. Набил руку, освоил основы CSS, HTML. Начал работать с CMS Joomla, редактировал шаблоны. В последствии перешли на Wordpress, где я впервые попробывал создать свой шаблон с 0. Интересных проектов не было, вся работа сводилась к изменению\натягиванию шаблонов и последующие администратирование сайта.
-					.work.col-md-4
+					.work.col-sm-4
 						b Рекламное агентство - IdeeGroupe
 						p: a(href="http://ideegroupe.com", target="_blank") http://ideegroupe.com
 						p Активно практиковали Wordpress, иногда делали шаблоны с 0, но чаще покупка и последющая переделка. Начал работать с PHP, писать свои модули, вникать в устройство Wordpress. Так же активно начал изучать jQuery, затем сам JS.
-					.work.col-md-4
+					.work.col-sm-4
 						b Хостинговая компания - Oversun
 						p: a(href="http://oversun.ru", target="_blank") http://oversun.ru
 						p Первая серьезная работа, крупная компания, все строго. Получил бесценный опыт, освоил кучу технологий, узнал много нового. Впервые попробывал серьезно использовать Git.
 
-			#portfolio
+			section#portfolio
 				h3 Портфолио
 				.row
-					.col-md-4
+					.col-sm-4
 						b Новостной портал - Scapp 
 						p: a(href="http://scapp.ru", target="_blank") http://scapp.ru
 						p Новостной портал, интересная навигация с использованием isotope. Изначально занимался FrontEnd (верстал виды страниц), затем начал использовать jQuery. Спустя 2-3 месяца втянулся в BackEnd. Крутиться все на ModX, используеться его Фреймворковая часть, остальное сами писали.
-					.col-md-4
+					.col-sm-4
 						b Сайт рекламного агентства - IdeeGroupe 
 						p: a(href="http://ideegroupe.com", target="_blank") http://ideegroupe.com
 						p Перелапатил Parallax от HotDot и привязал его к Wordpress. Управление слайдами происходило из админки и полностью настривалось. Потратил на это довольно много времени, зато узнал много нового о Wordpress и JS.
-					.col-md-4
+					.col-sm-4
 						h4 Wordpress 
 							small Доработанные шаблоны
 						p: a(href="http://spksochi.ru", target="_blank") http://spksochi.ru
@@ -114,7 +128,9 @@ block content
 						p: a(href="http://inter-sochi.ru", target="_blank") http://inter-sochi.ru
 						p: a(href="http://ultramarin-sochi.ru", target="_blank") http://ultramarin-sochi.ru
 						p: a(href="http://citrushotel.ru", target="_blank") http://citrushotel.ru
-			.panel-group#additionally
+				.text-muted И еще куча шаблонных, одностраничных и скучных проектов.
+
+			section.panel-group#additionally
 				.panel.panel-default
 					.panel-heading
 						h4.panel-title
@@ -126,14 +142,14 @@ block content
 					.panel-heading
 						h4.panel-title
 							a(data-toggle="collapse", data-parent="#additionally", href="#qa") Q\A
-					.panel-collapse.collapse#qa
+					.panel-collapse.collapse.in#qa
 						.panel-body
-							h4 - Что за фигня? Почему ты свою резюме сделал на Bootstrap? Сам отверстать не мог что-ли?
+							h4 - Почему ты свое резюме сделал на Bootstrap? Что за фигня? Сам сверстать не мог что-ли?
 							p - Я не дизайнер, у меня нету того чувства прекрастного, которое есть у них. Я счел нужным показать достаточно сложную структуру (посчитайте сколько тут списков, разделов и т.д.).
 							h4 - На какую з\п рассчитываешь?
 							p - Минимальная з\п на которую рассчитываю это 70 тысяч. Жить хочется, есть хочется, одевать тоже. Рабский труд не признаю, свою работу делаю достаточно хорошо.
 							h4 - Как насчет работы дома? Не против доделывать какие-то вещи в свободное время?
-							p - Против. Любое свое свободное время я посвещаю своим друзьям отдыху, и познанию новых вещей. Благодаря этому я узнал о NodeJS, препроцессорах и прочем. Думаю без этого щас был так и сидел, навестывал в Notepad++ HTML странички.
+							p - Против. Любое свое свободное время я посвещаю своим друзьям, отдыху и познанию новых вещей. Благодаря этому я узнал о NodeJS, препроцессорах и прочем. Думаю без этого щас был так и сидел, навестывал в Notepad++ HTML странички.
 							h4 У тебя указано что ты знаешь back-end, но в резюме делаешь упор на front-end, почему?
 							p - Т.к. считаю себя в первую очередь front-end developer'ом. Back-end я реализовывал для собственных проектов, когда не было никого другого что-бы этим занятся.
 
@@ -141,7 +157,7 @@ block content
 		.container
 			.text-muted
 				span.pull-right Проект на 
-					a(href="http://github.com/Narkeba/", target="_blank") GitHub
+					a(href="http://github.com/Narkeba/resume", target="_blank") GitHub
 				p Страница сделано с использованием 
 					a(href="http://gulpjs.com/", target="_blank") Gulp
 					, 
